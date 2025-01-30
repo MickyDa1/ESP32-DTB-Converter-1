@@ -14,5 +14,6 @@ i then put the following changes into effect in the "Void Setup()
 - started a while loop which whilst the connection was not established printed "Connecting to the WiFi"
 - defined the route and began the server in which I printed the ESP32 IP adress to the serial monitor
 
+I then created a C file which housed all of my HTML work, the reason i did not make it inital a HTML file was because it needed a C aspect included to thought it would be easier to do it this way.
 
-
+as of 30/01/2025, I have not changed anything with the "Void loop()" Section

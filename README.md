@@ -3,4 +3,9 @@
 This is a continuation of my first project:
 https://github.com/MickyDa1/Binary-Light-Display-Using-Arduino-Uno-R3/tree/master
 
-With this project, I wanted to take my first project and change ti slightly to make it availalbe have it functional from another device using my mobile hotspot. 
+With this project, I wanted to take my first project and change ti slightly to make it availalbe have it functional from another device using my mobile hotspot.
+
+THe first thing I did was to switch out the Arduino Uno R3 with the Arduino ESP32. This was quite simple however I tested each light with a simple "Blink" task to ensure that they were all working before continuing the work. 
+
+I then adjusted the inital functions set up to the different outports 
+![alt text](image.png)

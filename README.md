@@ -17,3 +17,5 @@ i then put the following changes into effect in the "Void Setup()
 I then created a C file which housed all of my HTML work, the reason i did not make it inital a HTML file was because it needed a C aspect included to thought it would be easier to do it this way.
 
 as of 30/01/2025, I have not changed anything with the "Void loop()" Section
+
+I then took out the old input syntax (mainly being a user input box and a button) and added a form, The staff memeber supporting me during this project suggested this would be a better idea

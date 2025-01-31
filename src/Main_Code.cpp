@@ -80,15 +80,16 @@ Serial.begin(9600);
 
 void loop()
 {
-if (Serial.available())
-  {
-    Serial.println("Start");
-    userInput = Serial.readString();
-    Serial.print("You Typed: ");
-    Serial.println(userInput);
 
-    runLoop = true;
-  }
+// if (Serial.available())
+//   {
+//     Serial.println("Start");
+//     userInput = Serial.readString();
+//     Serial.print("You Typed: ");
+//     Serial.println(userInput);
+
+//     runLoop = true;
+//   }
 
   while (runLoop == true) {
 

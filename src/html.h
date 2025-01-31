@@ -1,6 +1,6 @@
 #ifndef HTML_H
 #define HTML_H
 
-#define HTML_STRING "<html><body><p1><font size=\"10\"> Hello Michael!</font></p1><input type=\"number\" id=\"name\" name=\"name\"><button>Click Me</button></body></html>"
+#define HTML_STRING "<html><body><form action="/get">input1:<input type="text" name="input1"><input type="submit" value="Submit"></form><br><p>Hi Michael</p></body></html>"
 
 #endif

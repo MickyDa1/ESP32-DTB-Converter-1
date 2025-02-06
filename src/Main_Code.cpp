@@ -1,4 +1,5 @@
 #include <WiFi.h>
+#include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include <html.h>
 
@@ -20,7 +21,7 @@ boolean runLoop;
 
 // Sets the network connection Specs
 const char* ssid = "mman"; // Change it to Own Device
-cons`t char* password = "LongLane123"; // Change it to own Device
+const char* password = "LongLane123"; // Change it to own Device
 
 //Opens Port for the Web Server at port 80
 AsyncWebServer server(80);
@@ -41,9 +42,14 @@ void setup() {
   server.on("/", HTTP_GET, [](AsyncWebServerRequest* request) {
     Serial.println("ESP32 Web Server: New request received:");  // for debugging
     Serial.println("GET /");        // for debugging
-
+    if (request->hasParam("input1")) {
+      userInput = request->getParam("input1")->value();
+      request->send(200, "text/html",HTML_STRING);
+      runLoop = true;
+    } else {
     // Sets Up the Website To Input binary Number
-    request->send(200, "text/html",HTML_STRING);});
+      request->send(200, "text/html",HTML_STRING);}
+    });
 
   // Start the server
   server.begin();
@@ -54,7 +60,7 @@ void setup() {
   Serial.print("ESP32 Web Server's IP address: ");
   Serial.println(WiFi.localIP());
 
-Serial.begin(9600);
+Serial.begin(115200);
   // put your setup code here, to run once:
   pinMode(ledPin1, OUTPUT);
   pinMode(ledPin2, OUTPUT);
@@ -80,28 +86,17 @@ Serial.begin(9600);
 
 void loop()
 {
-
-// if (Serial.available())
-//   {
-//     Serial.println("Start");
-//     userInput = Serial.readString();
-//     Serial.print("You Typed: ");
-//     Serial.println(userInput);
-
-//     runLoop = true;
-//   }
-
   while (runLoop == true) {
 
       int userInputInt = userInput.toInt();
 
-      if (userInputInt >= 256 || userInputInt <= 0) {
-        Serial.println("Error - Your Number is to HIGH or to LOW, Please Try Again");
-        userInputInt = 0;
-        runLoop = false;    
-        Serial.println("please Enter a number between 1 and 255");
-        break;
-      }
+      // if (userInputInt >= 256 || userInputInt <= 0) {
+      //   Serial.println("Error - Your Number is to HIGH or to LOW, Please Try Again");
+      //   userInputInt = 0;
+      //   runLoop = false;    
+      //   Serial.println("please Enter a number between 1 and 255");
+      //   break;
+      // }
     
       for (int i = 0; i < 8; i++)
       {

@@ -20,8 +20,8 @@ String userInput;
 boolean runLoop;
 
 // Sets the network connection Specs
-const char* ssid = "mman"; // Change it to Own Device
-const char* password = "LongLane123"; // Change it to own Device
+const char* ssid = "Username"; // Change it to Own Device
+const char* password = "Password"; // Change it to own Device
 
 //Opens Port for the Web Server at port 80
 AsyncWebServer server(80);

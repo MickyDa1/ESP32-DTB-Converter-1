@@ -16,6 +16,10 @@ I then put the following changes into effect in the "Void Setup()
 
 I then created a C file which housed all of my HTML work, the reason I did not make it inital a HTML file was because it needed a C aspect included to thought it would be easier to do it this way.
 
-as of 30/01/2025, I have not changed anything with the "Void loop()" Section
-
 I then took out the old input syntax (mainly being a user input box and a button) and added a form, The staff memeber supporting me during this project suggested this would be a better idea
+
+I then added code which checks if the input1 (From the HTML.h file) is there, Checks if it has input and if it is true then it will activate the loop once the software has got there, otherwise it wont and the code will be useless.
+
+I then changed the Baud rate in the software from 9600 to 115200 to increase the transmission rate
+
+I finally Changed the const char* username and password to generic versions to keep my hotspot details private.

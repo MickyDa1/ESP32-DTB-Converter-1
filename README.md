@@ -23,3 +23,5 @@ I then added code which checks if the input1 (From the HTML.h file) is there, Ch
 I then changed the Baud rate in the software from 9600 to 115200 to increase the transmission rate
 
 I finally Changed the const char* username and password to generic versions to keep my hotspot details private.
+
+To see the fully functioning project, please watch the file titled "ESP32-DTB-Converter-1 Final Working"
